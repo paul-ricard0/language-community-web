@@ -1,0 +1,259 @@
+  *{
+    transition: all ease 1s;
+  }
+
+  .forum-background{
+    padding-left: 5rem;
+    background-color: var(--light-orange);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .top-search{
+    height: 6.667rem;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #search{
+    width: 60rem;
+    height: 3.333rem;
+    border-radius: 30rem;
+    border: 0.5px solid #C4C4C4;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+  }
+
+  #search::placeholder{
+    padding-left: 1.333rem;
+    color: #C4C4C4;
+  }
+
+  #search-icon{
+    margin-left: -2.666rem;
+  }
+
+  .main-forum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+  }
+
+  .forum-filter{
+    margin-top: .8rem;
+    height: 6.666rem;
+    width: 60rem;
+    background-color: #FFF;
+    border-radius: 0.666rem;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+  }
+
+  .forum-articles {
+    margin-top: 8rem;
+    overflow-y: scroll;
+    width: 60rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-option{
+    width: 16rem;
+    color: #000;
+    margin-left: 4rem;
+    display: flex;
+  }
+
+  .filter-option:hover{
+    color: #FF8000;
+    transition: all 0.7s;
+    cursor: pointer;
+  }
+
+  #titulo-recente{
+      padding-top: 0.33rem;
+  }
+
+  #img-recente{
+    width: 2.9rem;
+  }
+
+  .img{
+      width: 2.33rem;
+  }
+
+  .main-forum article{
+    width: 55rem;
+    border-radius: 0.666rem;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+    margin-top: 2rem;
+    padding: 1.5rem 2rem 1rem 2rem;
+    background-color: #FFF;
+    color: #000;
+  }
+
+  .main-forum article h1:hover{
+    color: #FF8000;
+    transition: all 0.8s;
+    cursor: pointer;
+  }
+
+  .page-control{
+    background-color: var(--background-orange);
+    display: flex;
+    width: 60rem;
+  }
+
+  .page-options{
+    background-color: var(--light-orange);
+    color: var(--background-orange);
+    padding: 0.533rem 1rem;
+    margin: 1rem 1rem;
+    border-radius: 0.333rem;
+  }
+
+  .page-options:hover{
+    background-color: #000;
+    color: var(--background-orange);
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .article-vote{
+    display: flex;
+  }
+
+  .upvote, .downvote{
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1rem;
+  }
+
+  .report{
+    width: 1rem;
+    height: 1rem;
+    margin: 1.5rem 0rem 0rem 1.5rem;
+  }
+
+  .upvote, .downvote, .report:hover{
+    cursor: pointer;
+  }
+
+  .downvote{
+    margin: 1rem 0rem 0rem 1rem;
+  }
+
+  @media screen and (max-width:1350px){
+    .top-search{
+      padding-left: 10rem;
+    }
+
+    .forum-filter{
+      margin-left: 11.2rem;
+    }
+
+    .forum-articles{
+      margin-left: 12rem;
+    }
+
+    .page-control{
+      margin-left: 12rem;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    #search{
+      width: 35rem;
+    }
+
+    .forum-filter{
+      width: 35rem;
+    }
+
+    .filter-option{
+      margin-left: 1rem;
+    }
+
+    .forum-articles article{
+      width: 35rem;
+    }
+
+    .page-options{
+      padding: 0.5rem;
+      margin: 0.5rem;
+    }
+
+    .page-control{
+      padding-left: 150px;
+    }
+  }
+
+  @media screen and (max-width: 870px){
+    #search{
+      width: 20rem;
+    }
+
+    .forum-filter{
+      flex-direction: column;
+      width: 20rem;
+      height: 11rem;
+    }
+
+    .filter-option{
+      padding: 0.5rem;
+    }
+
+    .forum-articles article{
+      width: 20rem;
+    }
+
+    .page-control{
+      flex-wrap: wrap;
+      padding-left: 50px;
+      width: 33.33rem;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .forum-articles{
+      margin-top: 13rem;
+    }
+
+    .top-search{
+      padding-left: 0rem;
+    }
+
+    .forum-filter, .forum-articles, .page-control{
+      margin-left: 3rem;
+    }
+
+    .page-control{
+      width: 26.66rem;
+      padding-left: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    .forum-filter{
+      width: 15.33rem;
+    }
+    .page-control{
+      width: 16.66rem;
+    }
+  }
+

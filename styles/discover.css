@@ -1,0 +1,137 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+main {
+  background-color: var(--light-orange);
+}
+section.dashboard {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: var(--light-orange);
+  box-sizing: border-box;
+}
+section.dashboard .current-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+section.dashboard aside {
+  display: flex;
+  justify-content: center;
+  padding: 1.1rem 2.18rem;
+  background-color: #C4C4C4;
+}
+section.dashboard aside h2 {
+  color: var(--background-orange);
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+section.dashboard .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+section.dashboard .contacts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 2rem;
+}
+section.dashboard .contact {
+  height: 9.3rem;
+  width: 9rem;
+  cursor: pointer;
+
+  transition: all .3;
+}
+section.dashboard .contact:hover {
+  transform: scale(1.2);
+}
+section.dashboard .contact img {
+  height: 9rem;
+  width: 9rem;
+} 
+.wrapper-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-img #add {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+.wrapper-img #add.active {
+  display: block;
+}
+.arrow {
+  background-color: var(--background-orange);
+  height: 5px;
+  width: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  position: absolute;
+}
+.arrow.right {
+  bottom: 4rem;
+  right: 2rem;
+}
+.arrow.left {
+  bottom: 4rem;
+  left: 2rem;
+}
+.arrow::after,
+.arrow::before {
+    content: "";
+    background-color: var(--background-orange);
+    position: absolute;
+    height: 5px;
+    width: 15px;
+}
+.arrow.right::after {
+  right: -3px;
+  bottom: 5px;
+  transform: rotate(45deg);
+}
+.arrow.right::before {
+  right: -3px;
+  bottom: -4px;
+  transform: rotate(130deg);
+}
+.arrow.left::after {
+  left: -3px;
+  bottom: 5px;
+  transform: rotate(-45deg);
+}
+.arrow.left::before {
+  left: -3px;
+  bottom: -4px;
+  transform: rotate(-130deg);
+}
+@media screen and (max-width: 1300px) {
+  #current-user-id {
+    height: 30rem;
+  }
+  .arrow.right {
+    bottom: 2rem;
+    right: 1rem;
+  }
+  .arrow.left {
+    bottom: 2rem;
+    left: 1rem;
+  }
+  section.dashboard .contact {
+    height: 5rem;
+    width: 5rem;
+  }
+  section.dashboard .contact img {
+    height: 5rem;
+    width: 5rem;
+  }
+}
